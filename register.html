@@ -1,0 +1,69 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+    
+
+    <!-- wrapper 시작 -->
+    <div id="wrapper">
+        <div id="wrapper-register" class="wrapper-register-body">
+            <h1 class="wrapper-register-btnHome">
+                <!-- 홈페이지로 돌아가는 버튼 -->
+                <a href="./detailpage.html"> <img src="https://cdn.discordapp.com/attachments/802001905818927114/803493903336079410/unknown.png" alt="홈페이지"></a>
+            </h1>
+            <div class="wrapper-register-item">
+                <div class="wrapper-register-switcher">
+                    <!-- 로그인, 회원가입 페이지 스위치하는 버튼 -->
+                    <a href="./login.html" class="wrapper-register-switcher-btn">로그인</a>
+                    <a href="./register.html" class="wrapper-register-switcher-btn">회원가입</a>
+                </div>
+                <div class="wrapper-register-info">
+                    <!-- 기본 인포 -->
+                    <dl>
+                        <dt class="wrapper-register-info-box-title">
+                            <label for="wrapper-register-info-user-name" class="wrapper-register-info-label">이름</label>
+                        </dt>
+                        <dd class="wrapper-register-info-box-text">
+                            <input id="wrapper-register-info-user-name" name="name" type="text" maxlength="16" placeholder="한글로 공백 없이 입력해주세요.">
+                        </dd>
+                        <dt class="wrapper-register-info-box-title">
+                            <label for="wrapper-register-info-user-email" class="wrapper-register-info-label">이메일</label>
+                        </dt>
+                        <dd class="wrapper-register-info-box-text">
+                            <input id="wrapper-register-info-user-email" name="email" type="email" maxlength="255" placeholder="이메일 주소를 입력해주세요.">
+                        </dd>
+                        <dt class="wrapper-register-info-box-title">
+                            <label for="wrapper-register-info-user-phone" class="wrapper-register-info-label">전화번호</label>
+                        </dt>
+                        <dd class="wrapper-register-info-box-text">
+                            <input id="wrapper-register-info-user-phone" name="phone" type="tel" maxlength="255" placeholder="-없이 숫자만 입력해주세요.">
+                        </dd>
+                        <dt class="wrapper-register-info-box-title">
+                            <label for="wrapper-register-info-user-password" class="wrapper-register-info-label">비밀번호</label>
+                        </dt>
+                        <dd class="wrapper-register-info-box-text">
+                            <input id="wrapper-register-info-user-password" name="password" type="password" maxlength="16" placeholder="비밀번호를 입력해주세요.">
+                        </dd>
+                        <dt class="wrapper-register-info-box-title">
+                            <label for="wrapper-register-info-user-name" class="wrapper-register-info-label">비밀번호 확인</label>
+                        </dt>
+                        <dd class="wrapper-register-info-box-text">
+                            <input id="wrapper-register-info-user-name" name="name" type="text" maxlength="16" placeholder="비밀번호를 확인해주세요.">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="wrapper-register-info-sign-up">
+                <input type="button" id="wrapper-register-info-sign-up-btn" value="가입하기">
+            </div>
+
+        </div>
+
+
+    </div>
+ 
