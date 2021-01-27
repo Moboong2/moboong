@@ -1,0 +1,49 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    
+
+    <!-- wrapper 시작 -->
+    <div id="wrapper">
+        <div id="wrapper-login" class="wrapper-login-body">
+            <h1 class="wrapper-register-btnHome">
+                <!-- 홈페이지로 돌아가는 버튼 -->
+                <a href="./detailpage.html"> <img src="https://cdn.discordapp.com/attachments/802001905818927114/803493903336079410/unknown.png" alt="홈페이지"></a>
+            </h1>
+            <div class="wrapper-login-item">
+                <div class="wrapper-login-switcher">
+                    <!-- 로그인, 회원가입 페이지 스위치하는 버튼 -->
+                    <a href="./login.html" class="wrapper-login-switcher-btn">로그인</a>
+                    <a href="./register.html" class="wrapper-login-switcher-btn">회원가입</a>
+                </div>
+            </div>
+            <div class="wrapper-login-info">
+                <!-- 기본 인포 -->
+                <dl>
+                    <dt class="wrapper-login-info-box-title">
+                        <label for="wrapper-login-info-user-name" class="wrapper-login-info-label">이메일</label>
+                    </dt>
+                    <dd class="wrapper-login-info-box-text">
+                        <input id="wrapper-login-info-user-name" name="name" type="text" maxlength="16" placeholder="이메일 주소를 입력해주세요.">
+                    </dd>
+                    <dt class="wrapper-login-info-box-title">
+                        <label for="wrapper-login-info-user-email" class="wrapper-login-info-label">비밀번호</label>
+                    </dt>
+                    <dd class="wrapper-login-info-box-text">
+                        <input id="wrapper-login-info-user-email" name="email" type="email" maxlength="255" placeholder="비밀번호를 입력해주세요.">
+                    </dd>
+                    
+                </dl>
+            </div>
+            <div class="wrapper-register-info-sign-up">
+                <input type="button" id="wrapper-login-info-sign-up-btn" value="로그인하기">
+            </div>
+        </div>
+
+
+    </div>

@@ -1,3 +1,4 @@
+
 @font-face {
     src: url('../fonts/BMJUA_ttf.ttf');
     font-family: 'jua';
@@ -151,64 +152,42 @@ input[id="menuicon"]:checked + label + div {right:0;}
 }
 /* 사이드 메뉴 끝 */
 
+
+/* 반응형 만들기 */
+@media screen and (max-width:960px){
+    #header-inner-bar{
+        display: none;
+    }
+    input[id="menuicon"] + label{
+        display: block;
+    }
+    #header{
+        height: 70px;
+    }
+    #header-inner{
+        text-align: center;
+    }
+    #header-inner-logoimage img{
+        width: 70px;
+    }
+    div[id="sidebar"] {
+        display: block;
+    }
+}
+/* 헤더 반응형 끝 */
+
 /* 여기까지 헤더 만들기 끝 */
 
-
-
-
-
 /* 래퍼 시작 */
-body{
-    padding-top: 90px;
-}
 #wrapper {
     width: 100%;
-<<<<<<< HEAD:detailpage.css
-    box-sizing: border-box;
-    height: 4000px;
-=======
     height: 4000px; /*이부분 수정 */
->>>>>>> 7c50079abfcd7cef99f0fac366b36a552dfa5d16:style.css
     background-color: darkgrey;
 }
-#headline {
-    width: 100%;
-    background-color: blue;
-    box-sizing: border-box;
-    padding-bottom: 20px;
-}
-#headline-up {
-    width: 100%;
-    height: 500px;
-    background-image: url(images/cover-web.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-}
-#headline-up-title {
-    width: 100%;
-    height: 100px;
-    background-color: coral;
-}
-#headline-up-teacher {
-    width: 100%;
-    height: 100px;
-    background-color:cornflowerblue;
-}
-#headline-up-genre {
-    width: 100%;
-    height: 100px;
-    background-color:darkcyan;
-}
-
 
 
 
 /* 래퍼 끝 */
-
-
-
-
 
 
 
@@ -288,34 +267,3 @@ body{
 #youtube img {
     width: 37px;
 }
-/* 푸터 끝 */
-
-
-
-
-
-/* 반응형 만들기 */
-@media screen and (max-width:960px){
-    #header-inner-bar{
-        display: none;
-    }
-    input[id="menuicon"] + label{
-        display: block;
-    }
-    #header{
-        height: 70px;
-    }
-    body{
-        padding-top: 70px;
-    }
-    #header-inner{
-        text-align: center;
-    }
-    #header-inner-logoimage img{
-        width: 70px;
-    }
-    div[id="sidebar"] {
-        display: block;
-    }
-}
-/* 헤더 반응형 끝 */
