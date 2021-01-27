@@ -1,0 +1,275 @@
+@font-face {
+    src: url('../fonts/BMJUA_ttf.ttf');
+    font-family: 'jua';
+}
+
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+a {
+    text-decoration: none;
+}
+/* 헤더 */
+#header{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color:  rgb(31, 27, 27);
+    box-sizing: border-box;
+    z-index: 1000;
+    padding: 0 13%;
+    font-size: 0;
+}
+#header-inner{
+    width: 100%;
+    background-color: rgb(31, 27, 27);
+}
+#logoImage{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+#bar{
+    float: right;
+    height: 90px;
+}
+#logoImage img{
+    width: 90px;
+}
+#bar > div{
+    float:left;
+    padding: 0 18px;
+    margin-top: 20px;
+}
+#bar a img{
+    width: 22px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#bar a p{
+    color: floralwhite;
+    font-size: 18px;
+    font-family: 'jua';
+    display: inline-block;
+    vertical-align: middle;
+}
+#bar a p:hover{
+    color: orange;
+}
+/* 헤더 끝 */
+
+
+
+/* 햄버거 메뉴 */
+input[id="menuicon"] {
+    display: none;
+}
+input[id="menuicon"] + label{
+    display: none;
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    cursor: pointer;
+    z-index: 1000;
+    top: 25px;
+    right: 25px;
+}
+input[id="menuicon"] + label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    border-radius: 30px;
+    background:floralwhite;
+    transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1){
+    top: 0;
+}
+input[id="menuicon"] + label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3){
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+/* 햄버거 끝 */
+
+/* 오른쪽 사이드 메뉴 */
+div[class="sidebar"] {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 27, 27);
+    /* background: rgba(31, 27, 27, .9); */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 999;
+    transition: all .35s;
+    padding-top: 10%;
+}
+input[id="menuicon"]:checked + label + div {right:0;}
+
+
+.sidebar div{
+    text-align: center;
+}
+.sidebar a img{
+    width: 28px;
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sidebar a p{
+    color: floralwhite;
+    font-size: 20px;
+    font-family: 'jua';
+    display: inline-block;
+    vertical-align: middle;
+}
+.sidebar div > a > p:hover{ 
+    color: orange;
+}
+/* 사이드 메뉴 끝 */
+
+
+/* 반응형 만들기 */
+@media screen and (max-width:960px){
+    #bar{
+        display: none;
+    }
+    input[id="menuicon"] + label{
+        display: block;
+    }
+    #logoImage img{
+        width: 70px;
+    }
+    #header{
+        height: 70px;
+    }
+    #header-inner{
+        text-align: center;
+    }
+    div[class="sidebar"] {
+        display: block;
+    }
+}
+
+/* 여기까지 헤더 만들기 */
+
+
+
+/* 래퍼 시작 */
+#wrapper {
+    width: 100%;
+    height: 4000px;
+    background-color: darkgrey;
+}
+
+
+
+
+
+
+
+
+
+/* 푸터 시작 */
+#footer {
+    width: 100%;
+    background: rgb(46, 48, 49);
+    padding: 0 16%;
+    box-sizing: border-box;
+}
+#footer-inner {
+    width: 2000px;
+    display: table-cell;
+    vertical-align: bottom;
+}
+#footer-inner-up{
+    width: 100%;
+    font-family: 'jua';
+    text-align: center;
+    margin-top: 20px;
+}
+#footer-inner-up div{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#footer-inner-up h4{
+    color: floralwhite;
+    font-size: 17px;
+}
+#footer-inner-up p{
+    font-size: 14px;
+    margin: 0;
+    padding: 1;
+    color:  rgb(134, 133, 131);
+}
+#footer-inner-up a{
+    display: block;
+    color: rgb(196, 194, 191);
+    font-size: 14px;
+    margin: 0;
+    padding: 1;
+}
+
+
+
+#footer-inner-down{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: gray solid 2px;
+}
+#copyright{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 80px;
+}
+#snslink{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 80px;
+}
+
+#copyright h5{
+    color: rgb(134, 133, 131);
+}
+#snslink img {
+    width: 40px;
+}
+
+#facebook img {
+    width: 30px;
+}
+#instar img{
+    width: 29px;
+}
+#youtube img {
+    width: 37px;
+}
