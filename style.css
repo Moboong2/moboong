@@ -13,6 +13,7 @@ html, body{
 a {
     text-decoration: none;
 }
+
 /* 헤더 */
 #header{
     top: 0;
@@ -30,40 +31,39 @@ a {
     width: 100%;
     background-color: rgb(31, 27, 27);
 }
-#logoImage{
+#header-inner-logoimage{
     display: inline-block;
     margin: 0;
     padding: 0;
 }
-#bar{
+#header-inner-bar{
     float: right;
     height: 90px;
 }
-#logoImage img{
+#header-inner-logoimage img{
     width: 90px;
 }
-#bar > div{
+#header-inner-bar div{
     float:left;
     padding: 0 18px;
     margin-top: 20px;
 }
-#bar a img{
+#header-inner-bar a img{
     width: 22px;
     display: inline-block;
     vertical-align: middle;
 }
-#bar a p{
+#header-inner-bar a p{
     color: floralwhite;
     font-size: 18px;
     font-family: 'jua';
     display: inline-block;
     vertical-align: middle;
 }
-#bar a p:hover{
+#header-inner-bar a p:hover{
     color: orange;
 }
 /* 헤더 끝 */
-
 
 
 /* 햄버거 메뉴 */
@@ -113,8 +113,9 @@ input[id="menuicon"]:checked + label span:nth-child(3){
 }
 /* 햄버거 끝 */
 
+
 /* 오른쪽 사이드 메뉴 */
-div[class="sidebar"] {
+div[id="sidebar"] {
     display: none;
     width: 100%;
     height: 100%;
@@ -129,24 +130,23 @@ div[class="sidebar"] {
 }
 input[id="menuicon"]:checked + label + div {right:0;}
 
-
-.sidebar div{
+#sidebar div{
     text-align: center;
 }
-.sidebar a img{
+#sidebar a img{
     width: 28px;
     padding: 0 5px;
     display: inline-block;
     vertical-align: middle;
 }
-.sidebar a p{
+#sidebar a p{
     color: floralwhite;
     font-size: 20px;
     font-family: 'jua';
     display: inline-block;
     vertical-align: middle;
 }
-.sidebar div > a > p:hover{ 
+#sidebar div > a > p:hover{ 
     color: orange;
 }
 /* 사이드 메뉴 끝 */
@@ -154,14 +154,11 @@ input[id="menuicon"]:checked + label + div {right:0;}
 
 /* 반응형 만들기 */
 @media screen and (max-width:960px){
-    #bar{
+    #header-inner-bar{
         display: none;
     }
     input[id="menuicon"] + label{
         display: block;
-    }
-    #logoImage img{
-        width: 70px;
     }
     #header{
         height: 70px;
@@ -169,12 +166,18 @@ input[id="menuicon"]:checked + label + div {right:0;}
     #header-inner{
         text-align: center;
     }
-    div[class="sidebar"] {
+    #header-inner-logoimage img{
+        width: 70px;
+    }
+    div[id="sidebar"] {
         display: block;
     }
 }
+/* 헤더 반응형 끝 */
 
-/* 여기까지 헤더 만들기 */
+/* 여기까지 헤더 만들기 끝 */
+
+
 
 
 
@@ -186,6 +189,8 @@ input[id="menuicon"]:checked + label + div {right:0;}
 }
 
 
+
+/* 래퍼 끝 */
 
 
 
@@ -218,7 +223,6 @@ input[id="menuicon"]:checked + label + div {right:0;}
     vertical-align: middle;
     text-align: left;
 }
-
 #footer-inner-up h4{
     color: floralwhite;
     font-size: 17px;
@@ -236,9 +240,6 @@ input[id="menuicon"]:checked + label + div {right:0;}
     margin: 0;
     padding: 1;
 }
-
-
-
 #footer-inner-down{
     width: 100%;
     text-align: center;
@@ -246,24 +247,24 @@ input[id="menuicon"]:checked + label + div {right:0;}
     padding-bottom: 20px;
     border-top: gray solid 2px;
 }
-#copyright{
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 80px;
-}
-#snslink{
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 80px;
-}
 
-#copyright h5{
+
+#footer-inner-down-copyright{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 80px;
+}
+#footer-inner-down-snslink{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 80px;
+}
+#footer-inner-down-copyright h5{
     color: rgb(134, 133, 131);
 }
-#snslink img {
+#footer-inner-down-snslink img {
     width: 40px;
 }
-
 #facebook img {
     width: 30px;
 }
