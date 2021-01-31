@@ -4,7 +4,7 @@ let totalpoint = 0;
 function value_check() {
     let total= 0;
     let Qnum=11;
-    let kkk = 1 ; 
+    let kkk=1;
     
    
    
@@ -21,9 +21,9 @@ function value_check() {
    
     
       
-       if(total>=10&& total<=20){
+       if(total>=10 && total<=20){
         $("#main-button").click(function(){ 
-            var tag = "<input type='button' id='result-button' "+'onclick='+'"'+"location.href="+"'mbti1.html' "+'"'+" value='결과!' />";
+            let tag = "<input type='button' id='result-button' "+'onclick='+'"'+"location.href="+"'mbti1.html' "+'"'+" value='결과!' />";
             
             $("#test").append(tag);
          });
@@ -31,7 +31,7 @@ function value_check() {
        }
        else if(total>=21 && total<=30){
         $("#main-button").click(function(){ 
-            var tag = "<input type='button' id='result-button' "+'onclick='+'"'+"location.href="+"'mbti2.html' "+'"'+" value='결과!' />";
+            let tag = "<input type='button' id='result-button' "+'onclick='+'"'+"location.href="+"'mbti2.html' "+'"'+" value='결과!' />";
             
             $("#test").append(tag);
          });
@@ -39,7 +39,7 @@ function value_check() {
        }
        else if(total>=31 && total<=40){
         $("#main-button").click(function(){ 
-            var tag = "<input type='button' id='result-button' "+'onclick='+'"'+"location.href="+"'mbti3.html' "+'"'+" value='결과!' />";
+            let tag = "<input type='button' id='result-button' "+'onclick='+'"'+"location.href="+"'mbti3.html' "+'"'+" value='결과!' />";
             
             $("#test").append(tag);
          });
