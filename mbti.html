@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
     <link rel="stylesheet" href="./mbti.css">
+    <script src="./jquery-3.5.1.min.js"></script>
 </head>
 <body>
     <!-- 헤더 메뉴 -->
@@ -54,33 +55,31 @@
             </div>
             <div class="wrapper-main-body">
                 <div class="wrpper-main-body-grid">
-                    <div class="wrapper-main-body-grid-step">
+                    <div class="wrapper-main-body-grid-step" style="padding-top: 50px;">
                         <div class="wrapper-main-body-grid-step-control-box">
                             <a class ="wrapper-main-body-grid-step-control-box-back" href ="./detailpage.html">뒤로</a> 
                         </div>
                         <div class="wrapper-main-body-grid-step-cont">
                             
-                                <div class ="wrapper-main-body-grid-step-cont-choice">
-                                    <strong class="wrapper-main-body-grid-step-cont-font">
-                                        <span class="wrapper-main-body-grid-step-cont-font-number">1</span>
-                                        1번문제    
-                                    </strong>  
+                            <div id= "test"class ="wrapper-main-body-grid-step-cont-choice">
+                                
+                                1번문제  
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                <input type="radio" name="1" checked="checked" value="1" > 1번
+                                </label>
                                     <label class="wrapper-main-body-grid-step-cont-choice-box">
-                                    <input type="radio" name="1" checked="checked"value="1" > 1번
-                                    </label>
-                                    <label class="wrapper-main-body-grid-step-cont-choice-box">
-                                    <input type="radio" name="1" value="2" >2번
-                                    </label>
-                                    <label class="wrapper-main-body-grid-step-cont-choice-box">
-                                    <input type="radio" name="1"value="3" >3번
-                                    </label>
-                                    <label class="wrapper-main-body-grid-step-cont-choice-box">
-                                    <input type="radio" name="1" value="4" >4번
-                                    </label> <!--2번테이블 끝 -->
-                                    <br>
+                                <input type="radio" name="1" value="2" >2번
+                                </label>
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                <input type="radio" name="1"value="3" >3번
+                                </label>
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                <input type="radio" name="1" value="4" >4번
+                                </label> <!--1번테이블 끝 -->
+                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                3번문제
+                                2번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="2" checked="checked"value="1" > 1번
                                 </label>
@@ -92,11 +91,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="2" value="4" >4번
-                                </label> <!--3번테이블 끝 -->
+                                </label> <!--2번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                4번문제
+                                3번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="3" checked="checked"value="1" > 1번
                                 </label>
@@ -108,11 +107,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="3" value="4" >4번
-                                </label> <!--4번테이블 끝 -->
+                                </label> <!--3번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                5번문제
+                                4번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="4" checked="checked"value="1" > 1번
                                 </label>
@@ -124,11 +123,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="4" value="4" >4번
-                                </label> <!--5번테이블 끝 -->
+                                </label> <!--4번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                6번문제
+                                5번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="5" checked="checked"value="1" > 1번
                                 </label>
@@ -140,11 +139,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="5" value="4" >4번
-                                </label> <!--6번테이블 끝 -->
+                                </label> <!--5번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                7번문제
+                                6번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="6" checked="checked"value="1" > 1번
                                 </label>
@@ -156,11 +155,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="6" value="4" >4번
-                                </label> <!--7번테이블 끝 -->
+                                </label> <!--6번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                8번문제
+                                7번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="7" checked="checked"value="1" > 1번
                                 </label>
@@ -172,11 +171,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="7" value="4" >4번
-                                </label> <!--8번테이블 끝 -->
+                                </label> <!--7번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                9번문제
+                                8번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="8" checked="checked"value="1" > 1번
                                 </label>
@@ -188,11 +187,11 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="8" value="4" >4번
-                                </label> <!--9번테이블 끝 -->
+                                </label> <!--8번테이블 끝 -->
                                 <br>
                                 </div>
                                 <div class ="wrapper-main-body-grid-step-cont-choice">
-                                10번문제
+                                9번문제
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="9" checked="checked"value="1" > 1번
                                 </label>
@@ -204,11 +203,28 @@
                                 </label>
                                 <label class="wrapper-main-body-grid-step-cont-choice-box">
                                     <input type="radio" name="9" value="4" >4번
-                                </label> <!--10번테이블 끝 -->
+                                </label> <!--9번테이블 끝 -->
 
+                                </div>
+                                <div class ="wrapper-main-body-grid-step-cont-choice">
+                                10번문제
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                    <input type="radio" name="10" checked="checked"value="1" > 1번
+                                </label>
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                    <input type="radio" name="10" value="2" >2번
+                                </label>
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                    <input type="radio" name="10"value="3" >3번
+                                </label>
+                                <label class="wrapper-main-body-grid-step-cont-choice-box">
+                                        <input type="radio" name="10" value="4" >4번
+                                </label> <!--10번테이블 끝 -->
+    
                                 </div>
                                 
                         </div>
+                        <button  id = "main-button" onclick="value_check()">당신의 성향을 보기위해 이곳을 클릭하여주세요 </button> 
                     </div>
                 </div>
 
@@ -278,5 +294,6 @@
         </div>
     </footer>
     <!-- 푸터 끝 -->
+    <script src="./mbti.js"></script>
 </body>
 </html>
