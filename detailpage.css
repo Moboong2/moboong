@@ -9,9 +9,18 @@ html, body{
     padding: 0;
     left: 0;
     top: 0;
+    font-family: 'jua';
+    font-weight: lighter;
+    color: floralwhite;
 }
 a {
     text-decoration: none;
+}
+div{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+    font-weight: lighter;
 }
 
 /* 헤더 */
@@ -21,15 +30,16 @@ a {
     position: fixed;
     width: 100%;
     height: 90px;
-    background-color:  rgb(31, 27, 27);
+    background-color:  rgb(28, 28, 28);
     box-sizing: border-box;
     z-index: 1000;
     padding: 0 13%;
     font-size: 0;
 }
+
 #header-inner{
     width: 100%;
-    background-color: rgb(31, 27, 27);
+    background-color: rgb(28, 28, 28);
 }
 #header-inner-logoimage{
     display: inline-block;
@@ -41,7 +51,9 @@ a {
     height: 90px;
 }
 #header-inner-logoimage img{
-    width: 90px;
+    /*width: 90px;*/
+    width: 85px;
+    margin-top:20px;
 }
 #header-inner-bar div{
     float:left;
@@ -61,7 +73,7 @@ a {
     vertical-align: middle;
 }
 #header-inner-bar a p:hover{
-    color: orange;
+    color: rgb(255, 0, 98);
 }
 /* 헤더 끝 */
 
@@ -119,7 +131,7 @@ div[id="sidebar"] {
     display: none;
     width: 100%;
     height: 100%;
-    background: rgb(31, 27, 27);
+    background: rgb(28, 28, 28);
     /* background: rgba(31, 27, 27, .9); */
     position: fixed;
     top: 0;
@@ -147,7 +159,7 @@ input[id="menuicon"]:checked + label + div {right:0;}
     vertical-align: middle;
 }
 #sidebar div > a > p:hover{ 
-    color: orange;
+    color:rgb(255, 0, 98);
 }
 /* 사이드 메뉴 끝 */
 
@@ -163,17 +175,14 @@ body{
 }
 #wrapper {
     width: 100%;
-<<<<<<< HEAD:detailpage.css
     box-sizing: border-box;
-    height: 4000px;
-=======
-    height: 4000px; /*이부분 수정 */
->>>>>>> 7c50079abfcd7cef99f0fac366b36a552dfa5d16:style.css
     background-color: darkgrey;
+    padding-bottom: 100px;
 }
+/* 헤드라인 시작 */
 #headline {
     width: 100%;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     box-sizing: border-box;
     padding-bottom: 20px;
 }
@@ -184,31 +193,361 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
+    display: inline-block;
 }
 #headline-up-title {
     width: 100%;
-    height: 100px;
-    background-color: coral;
+    height: 70px;
+    margin-top: 360px;
+    text-align: center;
 }
 #headline-up-teacher {
     width: 100%;
-    height: 100px;
-    background-color:cornflowerblue;
+    height: 40px;
+    text-align: center;
 }
 #headline-up-genre {
     width: 100%;
-    height: 100px;
-    background-color:darkcyan;
+    height: 30px;
+    text-align: center;
+}
+#headline-up-title h4{
+    color: floralwhite;
+    font-family: 'jua';
+    font-size: 50px;
+    display: inline;
+    font-weight: lighter;
+}
+#headline-up-teacher h4{
+    color: floralwhite;
+    font-family: 'jua';
+    font-size: 23px;
+    display: inline;
+    font-weight: lighter;
+}
+#headline-up-genre p{
+    color: floralwhite;
+    font-family: 'jua';
+    font-size: 12px;
+    background-color: gray;
+    display: inline;
+    font-weight: lighter;
+    padding: 6px;
+    margin: 0;
+    border-radius: 10%;
 }
 
+#headline-down{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+#headline-down-inner{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+#infoplay, #infohave, #infoprice{
+    padding: 20px;
+    margin: 0;
+    width: 290px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
 
+#infoplay{
+    border-right: solid 2px  rgb(134, 133, 131);
+}
+#infoprice{
+    border-left: solid 2px  rgb(134, 133, 131);
+}
+#headline-down-inner img{
+    width: 40px;
+}
+#headline-down-inner h4{
+    font-size: 17px;
+    font-family: 'jua';
+    color:  rgb(211, 210, 210);
+    font-weight: lighter;
+}
+#headline-down-inner p{
+    font-size: 13px;
+    font-family: 'jua';
+    color:  rgb(134, 133, 131);
+    font-weight: lighter;
+}
+#infoprice h4{
+    color: rgb(255, 0, 98);
+    border: rgb(255, 0, 98) solid 1px;
+    display: inline-block;
+    border-radius: 10%;
+    font-size: 15px;
+    padding: 2px;
+    margin: 0;
+}
+#infoprice-contents{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+#infoprice-contents div{
+    display: inline-block;
+}
+#infoprice-contents-left{
+    border-right: 2px solid rgb(134, 133, 131);
+    padding: 2px 10px;
+}
+#infoprice-contents-right{
+    padding: 2px 10px;
+    margin: 0;
+}
+#infoprice-contents > div > h4{
+    color: floralwhite;
+    border: none;
+    font-size: 22px;
+}
+#infoprice-contents > div > p{
+    margin: 0;
+    padding: 0;
+}
+#infoprice a{
+    color: floralwhite;
+    background-color: rgb(255, 0, 98);
+    padding: 10px 60px;
+    border-radius: 2.5%;
+    z-index: 100;
+}
+#infoprice a:hover{
+    background-color: rgb(190, 0, 73);
+}
+/* 헤드라인 끝 */
+/* 비디오 섹션 시작 */
+#videosection{
+    margin: 0;
+    padding: 20px 20px;
+    width: 100%;
+    background-color: rgb(31, 27, 27);
+    text-align: center;
+}
+#videosection-inner{
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: solid 1px rgb(134, 133, 131);
 
+}
+#videosection-inner h6{
+    font-size: 17px;
+    font-weight: lighter;
+    color:  rgb(255, 0, 98);
+    padding: 0;
+    margin: 0;
+}
+#videosection-inner h2{
+    padding: 0;
+    margin: 20px;
+    font-size: 30px;
+}
+#videosection-inner p{
+    margin-top: 40px;
+}
+/* 비디오 섹션 끝 */
+/* 이미지 섹션 시작 */
+#imagesection{
+    padding: 40px 0px;
+    width: 100%;
+    background-color: rgb(31, 27, 27);
+    text-align: center;
+}
+#imagesection-up{
+    width: 100%;
+}
+#imagesection-up-left{
+    width: 470px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+#imagesection-up-right{
+    width: 470px;
+    padding-top: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+#imagesection-up-right img{
+    width: 470px;
+}
+#imagesection-down{
+    width: 100%;
+}
+#imagesection-down-left{
+    width: 470px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+#imagesection-down-right{
+    width: 470px;
+    padding-top: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+#imagesection-down-right img{
+    width: 470px;
+}
 
+#imagesection h1{
+    line-height: 1.5em;
+    margin-bottom: 40px ;
+}
+#imagesection p{
+    color: rgb(134, 133, 131);
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+/* 이미지 섹션 끝 */
+/* 컨텐츠 섹션 시작*/
+#contentssection {
+    width: 100%;
+    background-color: floralwhite;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+#contentssection-title {
+    width: 100%;
+}
+#contentssection-title h4{
+    width: 100%;
+    color: rgb(255, 0, 98);
+    font-weight: lighter;
+    font-size: 20px;
+}
+#contentssection-title p{
+    width: 100%;
+    font-weight: lighter;
+    font-size: 35px;
+}
+
+.contentssection-inner {
+    width: 100%;
+    padding: 10px;
+}
+.contents {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8;
+}
+.contents-img {
+    width: 100%;
+}
+.contents-img img{
+    width: 280px;
+}
+.contents-text {
+    width: 100%;
+}.contents-text h4{
+    width: 280px;
+    font-size: 20px;
+}
+.contents-text p{
+    width: 280px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+/* 컨텐츠 섹션 끝 */
+/* 강사 섹션 시작 */
+#teachersection{
+    width: 100%;
+    background-color: floralwhite;
+    text-align: center;
+    padding: 10px;
+}
+#teachersection-title{
+    color: black;
+    padding: 0 15%;
+}
+#teachersection-title h4{
+    color: rgb(255, 0, 98);
+    font-weight: lighter;
+    font-size: 20px;
+    border-top: gray solid 1px;
+    padding-top: 100px;
+}
+#teachersection-title p{
+    font-weight: lighter;
+    font-size: 35px;
+}
+.teachersection-inner{
+    width: 100%;
+    padding: 5 0;
+}
+.teacher{
+    width: 100%;
+    margin: 20 0;
+}
+.teacher div{
+    margin: 40 0;
+}
+.teacher-img{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding: 0 20;
+}
+.teacher-name{
+    width: 280px;
+    height: 100px;
+    padding: 0 20;
+    display: inline-block;
+    vertical-align: top;
+}
+.teacher-career{
+    width: 430px;
+    height: 300px;
+    padding: 0 20;
+    display: inline-block;
+    vertical-align: top;
+}
+.teacher-img img{
+    width: 180px;
+}
+.teacher-name > h2{
+    margin: 0;
+    padding: 10 0;
+    text-align: left;
+    color: black;
+    font-weight: lighter;
+    border-bottom: 1px solid gray;
+
+}
+.teacher-name > p{
+    text-align: left;
+    color: black;
+    font-weight: lighter;
+    font-size: 15px;
+}
+.teacher-career > h2{
+    margin: 0;
+    padding: 10 0;
+    text-align: left;
+    color: black;
+    font-weight: lighter;
+    border-bottom: 1px solid gray;
+
+}
+.teacher-career > p{
+    text-align: left;
+    color: black;
+    font-weight: lighter;
+    font-size: 15px;
+}
+/* 강사 섹션 끝 */
+/* 가격 소개 섹션 시작 */
+
+/* 가격 소개 섹션 끝 */
 /* 래퍼 끝 */
-
-
-
-
 
 
 
@@ -232,10 +571,16 @@ body{
 }
 #footer-inner-up div{
     display: inline-block;
-    width: 250px;
+    width: 210px;
     height: 250px;
     vertical-align: middle;
     text-align: left;
+}
+#footer-inner-up-etc{
+    padding-left: 60px;
+}
+#footer-inner-up-contact{
+    padding-left: 30px;
 }
 #footer-inner-up h4{
     color: floralwhite;
@@ -261,8 +606,6 @@ body{
     padding-bottom: 20px;
     border-top: gray solid 2px;
 }
-
-
 #footer-inner-down-copyright{
     display: inline-block;
     vertical-align: middle;
@@ -275,6 +618,7 @@ body{
 }
 #footer-inner-down-copyright h5{
     color: rgb(134, 133, 131);
+    font-family: 'Franklin Gothic Medium';
 }
 #footer-inner-down-snslink img {
     width: 40px;
@@ -289,9 +633,6 @@ body{
     width: 37px;
 }
 /* 푸터 끝 */
-
-
-
 
 
 /* 반응형 만들기 */
@@ -317,5 +658,83 @@ body{
     div[id="sidebar"] {
         display: block;
     }
+    #headline-up-title h4{
+        font-size: 40px;
+    }
+    #infoplay, #infohave, #infoprice{
+        width: 100%;
+        border: none;
+    }
+    #infoprice{
+        background-color: rgb(78, 78, 78);
+    }
+    #infoprice a{
+        padding: 15px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        border-radius: 0;
+    }
+    #videosection{
+        padding: 20px 20px;
+    }
+    #videosection-inner-container{
+        height: 0px;
+        padding-bottom: 56.25%;
+        position: relative;
+        left: -50%;
+    }
+    #videosection-inner-container iframe{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .contents{
+        display: block;
+    }
+    .contents-img img{
+        width: 80%;
+    }
+    .contents-text h4{
+        width: 100%;
+    }
+    .contents-text p{
+        width: 80%;
+        margin-left: 10%
+    }
+    .teacher-img{
+        display: block;
+        width: 100%;
+    }
+    .teacher-name{
+        display: block;
+        width: 100%;
+    }
+    .teacher-career{
+        display: block;
+        width: 100%;
+    }
+
+
+    #footer-inner-up div{
+        width: 100%;
+        height: 150px;
+        display: block;
+        text-align: center;
+    }
+    #footer-inner-up-etc{
+        padding-left: 0;
+    }
+    #footer-inner-up-contact{
+        padding-left: 0;
+    }
+    #footer{
+        padding-bottom: 50px;
+    }
+    #teachersection-title{
+        padding: 0 15;
+    }
 }
-/* 헤더 반응형 끝 */
+/* 반응형 끝 */
