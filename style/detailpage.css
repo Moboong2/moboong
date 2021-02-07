@@ -47,11 +47,11 @@ h1,h2,h3,h4,h5,h6,p{
     margin-right: 300px;
 }
 #header-inner-bar{
-    width: 410px;
+    width: 430px;
     height: 90px;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 300px;
+    margin-left: 280px;
 }
 #header-inner-logoimage img{
     height: 70px;
@@ -139,7 +139,7 @@ div[id="sidebar"] {
     right: -100%;
     z-index: 999;
     transition: all .35s;
-    padding-top: 10%;
+    padding-top: 70px;
 }
 input[id="menuicon"]:checked + label + div {right:0;}
 
@@ -178,7 +178,6 @@ body{
     width: 100%;
     box-sizing: border-box;
     background-color: #ffffff;
-    padding-bottom: 100px;
 }
 /* 헤드라인 시작 */
 #headline {
@@ -191,7 +190,7 @@ body{
 #headline-up {
     width: 100%;
     height: 500px;
-    background-image: url(images/cover-web.png);
+    /* background-image: url("../images/cover-web.png"); */
     background-repeat: no-repeat;
     background-position-x: center;
     display: inline-block;
@@ -234,7 +233,7 @@ body{
     display: inline;
     font-weight: lighter;
     padding: 6px;
-    margin: 0;
+    margin: 0 2px;
     border-radius: 10%;
 }
 
@@ -365,6 +364,7 @@ body{
 }
 #imagesection-up-left{
     width: 470px;
+    padding-left: 10px;
     display: inline-block;
     text-align: left;
     vertical-align: top;
@@ -383,6 +383,7 @@ body{
 }
 #imagesection-down-left{
     width: 470px;
+    padding-left: 10px;
     display: inline-block;
     text-align: left;
     vertical-align: top;
@@ -573,6 +574,7 @@ body{
     display: inline-block;
     vertical-align: middle;
     position: relative;
+    margin-left: 50px;
 }
 
 #pricesection-inner-left-title{
@@ -737,6 +739,47 @@ body{
 }
 /* 래퍼 끝 */
 
+/* 리뷰 */
+#review{
+    width: 100%;
+    background-color: grey;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+}
+#review a{
+    text-decoration: none;
+    color: black;
+    background-color: cadetblue;
+    margin: 0 10px;
+}
+#review-input{
+    width: 100%;
+    background-color: cornflowerblue;
+    margin: 0 auto;
+}
+#review-input > form{
+    background-color: darksalmon;
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+#review-result{
+    width: 100%;
+    background-color: lightblue;
+    color: black;
+}
+#review-result > p{
+    background-color: darksalmon;
+    width: 700px;
+    margin: 10 auto;
+    text-align: left;
+    font-weight: lighter;
+    line-height: 1.3em;
+}
+
+/* 리뷰 끝 */
 
 
 /* 푸터 시작 */
@@ -863,7 +906,10 @@ body{
         display: block;
     }
     #headline-up-title h4{
-        font-size: 40px;
+        font-size: 35px;
+    }
+    #headline-up-teacher h4{
+        font-size: 15px;
     }
     #infoplay, #infohave, #infoprice{
         width: 100%;
@@ -874,6 +920,7 @@ body{
     }
     #infoprice a{
         padding: 15px;
+        padding-left: 0;
         position: fixed;
         left: 0;
         bottom: 0;
@@ -894,6 +941,24 @@ body{
         width: 100%;
         height: 100%;
         position: absolute;
+    }
+    #imagesection-up-right{
+        width: 100%;
+    }
+    #imagesection-up-right img{
+        width: 95%;
+    }
+    #imagesection-down-right{
+        width: 100%;
+    }
+    #imagesection-up-left{
+        width: 100%;
+    }
+    #imagesection-down-left{
+        width: 100%;
+    }
+    #imagesection-down-right img{
+        width: 95%;
     }
     .contents{
         display: block;
@@ -918,7 +983,7 @@ body{
         text-align: center;
     }
     .teacher-img img{
-        width: 400px;
+        width: 60%;
     }
     .teacher-name{
         display: block;
@@ -931,14 +996,47 @@ body{
     #teachersection-title{
         padding: 0 15;
     }
+    #pricesection-inner-right{
+        width: 100%;
+        margin-left: 0;
+    }
+    #pricesection-inner-left{
+        width: 100%
+    }
+    #pricesection-inner-left-price-right{
+        margin-left: 100px;
+    }
+    #pricesection-inner-left-result-right h2{
+        margin-left: 50px;
+        font-size: 18px;
+    }
+    #pricesection-inner-left-result-left h2{
+        font-size: 18px;
+    }
     .curriculum-img{
-        width: 45%
+        width: 52%;
+        margin: 0;
+        padding: 0;
     }
     .curriculum-img img{
         width: 100%
     }
     .curriculum-text{
         width: 45%;
+    }
+    .curriculum-text h4{
+        font-size: 16px;
+        line-height: 1em;
+    }.curriculum-text p{
+        font-size: 11px;
+        line-height: 1em;
+    }
+
+    #review-input > form{
+        width: 100%;
+    }
+    #review-result > p{
+        width: 100%;
     }
 
     #footer-inner-up div{

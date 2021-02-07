@@ -20,7 +20,6 @@
     vertical-align: middle;
     padding: 5px;
     text-align: left;
-    margin-right: 130px;
 }
 .slidesection-inner-left p{
     color: red;
@@ -53,27 +52,25 @@
     width: 400px;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 130px;
 }
 .slidesection-inner-right img{
     width: 400px;
     border-radius: 12px;
 }
-
-    .slidesection{position:relative;}
+    /* .slidesection{position:relative;}
     .slidesection-inner{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0;animation:fade 8s infinite;}
     .slidesection-inner div:nth-child(1){background:#ffa;animation-delay:0s}
     .slidesection-inner div:nth-child(2){background:#faa;animation-delay:2s}
     .slidesection-inner div:nth-child(3){background:#afa;animation-delay:4s}
     .slidesection-inner div:nth-child(4){background:#aaf;animation-delay:6s}
      /* 100 / 8 = 12.5 */
-@keyframes fade {
+/* @keyframes fade {
     0% {opacity:0;}
     5% {opacity:1;}
     25% {opacity:1;}
     30% {opacity:0;}
     100% {opacity:0;}
-}
+} */
 
 
 #iconsection{

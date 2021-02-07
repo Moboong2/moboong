@@ -1,10 +1,32 @@
+<?php
+require('./lib/print.php');
+?>
+
+<?php
+$conn = mysqli_connect("localhost", "root", "h123123", "mogang");
+
+$filtered_id = mysqli_real_escape_string($conn, $_GET['id']); //sql 주입 공격을 막을 수 있어.
+$sql = "SELECT * FROM review WHERE pageid={$filtered_id}";
+$result = mysqli_query($conn, $sql);
+$list = '';
+while ($row = mysqli_fetch_array($result)) {
+    $list = $list . '<p>' . $row['userid'] . '<br>' . $row['title'] . '<br>' . $row['description'] . '<br>' . $row['created'] . '</p>';
+}
+?>
+
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Page</title>
-    <link rel="stylesheet" href="detailpage.css">
+    <title>
+        <?php
+        print_single("title");
+        ?>
+    </title>
+    <link rel="stylesheet" href="./style/detailpage.css">
+    <link rel=" shortcut icon" href="./images/fabicon.png">
+    <link rel="icon" href="./images/fabicon.png">
 </head>
 
 <body>
@@ -12,8 +34,8 @@
     <header id="header" role="banner">
         <div id="header-inner">
             <div id="header-inner-logoimage">
-                <a href="">
-                    <img src="images/logoicon5.png">
+                <a href="./mainpage.html">
+                    <img src="./images/logoicon5.png">
                 </a>
             </div>
 
@@ -24,10 +46,10 @@
                 <div><a href="">
                         <p>카테고리</p>
                     </a></div>
-                <div><a href=""><img src="images/loginicon.png">
-                        <p>로그인</p>
+                <div><a href=""><img src="./images/loginicon.png">
+                        <p>로그인#</p>
                     </a></div>
-                <div><a href=""><img src="images/singinicon.png">
+                <div><a href=""><img src="./images/singinicon.png">
                         <p>회원가입</p>
                     </a></div>
             </div>
@@ -41,10 +63,10 @@
         <span></span>
     </label>
     <div id="sidebar">
-        <div><a href=""><img src="images/loginicon.png">
+        <div><a href=""><img src="./images/loginicon.png">
                 <p>로그인</p>
             </a></div>
-        <div><a href=""><img src="images/singinicon.png">
+        <div><a href=""><img src="./images/singinicon.png">
                 <p>회원가입</p>
             </a></div>
         <div><a href="">
@@ -60,44 +82,50 @@
     <!-- wrapper 시작 -->
     <div id="wrapper">
         <div id="headline">
-            <div id="headline-up">
+            <div id="headline-up" style="background-image: url('data/sample<?php echo $_GET['id'] ?>/images/cover-web.png')">
                 <div id="headline-up-title">
-                    <h4>마들렌&피낭시에 Course</h4>
+                    <h4>
+                        <?php
+                        print_single("title");
+                        ?>
+                    </h4>
                 </div>
                 <div id="headline-up-teacher">
-                    <h4>백희준, 김진우, 황준호, 백종원, 이연복</h4>
+                    <h4>
+                        <?php
+                        print_single("teacher");
+                        ?>
+                    </h4>
                 </div>
                 <div id="headline-up-genre">
-                    <p>르솔레이</p>
-                    <p>세드라</p>
-                    <p>오펠두스</p>
-                    <p>가루하루</p>
-                    <p>해피해피케이크</p>
+                    <!-- 루프를 사용한 생산 숫자가 정해지지 않은 컨텐츠는 폴더에 -->
+                    <?php
+                    print_multi("contents");
+                    ?>
                 </div>
             </div>
             <div id="headline-down">
                 <div id="headline-down-inner">
                     <div id="infoplay">
-                        <img src="images/playicon.png">
-                        <h4>총 10회 영상</h4>
-                        <p>최고의 구움과자를 만드는 인기 디저트 샵 5곳의 마들렌&피낭시에 레시피와 노하우를 온라인 실무교육으로 제공합니다.</p>
+                        <img src="./images/playicon.png">
+                        <h4>총 <?php print_single("playnumber"); ?>회 영상</h4>
+                        <p><?php print_single("infoplay"); ?></p>
                     </div>
                     <div id="infohave">
-                        <img src="images/haveicon.png">
+                        <img src="./images/haveicon.png">
                         <h4>평생소장</h4>
-                        <p>한 번 구매로 최고의 구움과자를 만드는 인기 디저트 샵 5곳의 마들렌&피낭시에 노하우를 담은 동영상 클래스 10개가 영원히 내것이 됩니다.</p>
+                        <p><?php print_single("infohave"); ?></p>
                     </div>
                     <div id="infoprice">
                         <h4>평생소장</h4>
-                        <p style="color: #ffffff;"><del>200,000원</del> &nbsp;&nbsp;100,000원 &nbsp;&nbsp;<span
-                                style="color: rgb(255, 0, 98);"> 50%할인</span></p>
+                        <p style="color: #ffffff;"><del><?php print_single("infoprice1"); ?>원</del> &nbsp;&nbsp;<?php print_single("infoprice2"); ?>원 &nbsp;&nbsp;<span style="color: rgb(255, 0, 98);"> <?php print_single("infoprice3"); ?>%할인</span></p>
                         <div id="infoprice-contents">
                             <div id="infoprice-contents-left">
-                                <h4>월 20,000</h4>
-                                <p>*5개월 할부 시</p>
+                                <h4>월 <?php print_single("infoprice4"); ?></h4>
+                                <p>*<?php print_single("infoprice5"); ?>개월 할부 시</p>
                             </div>
                             <div id="infoprice-contents-right">
-                                <h4>2/19(금)</h4>
+                                <h4><?php print_single("infoprice6"); ?></h4>
                                 <p>가격이 인상됩니다.</p>
                             </div>
                         </div>
@@ -110,75 +138,40 @@
         <div id="videosection">
             <div id="videosection-inner">
                 <h6>소개영상</h6>
-                <h2>5인의 구움과자 셰프</h2>
-                <h2>프리미엄 디저트의 정수</h2>
+                <h2><?php print_single("video1"); ?></h2>
+                <h2><?php print_single("video2"); ?></h2>
                 <div id="videosection-inner-container">
-                    <iframe width="700" height="393.75" src="https://www.youtube.com/embed/CiEfFt70_jM" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <iframe width="700" height="393.75" src="<?php print_single("video3url"); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p>
-                    "굽는 과정은 늘 정확하지가 않아요.<br>
-                    여러분이 가지고 있는 오븐을 이해하고,<br>
-                    그 다음에 온도와 시간을 조절하시는 것이 가장 좋습니다."
-                </p>
+                <p><?php print_single("video4"); ?></p>
             </div>
         </div>
 
         <div id="imagesection">
             <div id="imagesection-up">
                 <div id="imagesection-up-left">
-                    <h1>
-                        단 한 번도 공개된 적 없는<br>
-                        인기 디저트 샵의<br>
-                        구움과자 레시피 최초공개!
-                    </h1>
-                    <p>
-                        배우고 싶어도 클래스가 없어 배울 수 없었던<br>
-                        인기 메뉴 레시피는 물론<br>
-                        이색 재료 배합법과 글루텐 프리 노하우까지<br>
-                        모두 준비했습니다.
-                    </p>
-                    <p>
-                        최고의 구움과자를 만드는 셰프 5인의<br>
-                        최초 공개 클래스와 특별한 10가지 레시피,<br>
-                        이제 Mogang에서 만나보세요.
-                    </p>
+                    <h1><?php print_single("img1"); ?></h1>
+                    <p><?php print_single("img2"); ?></p>
+                    <p><?php print_single("img3"); ?></p>
                 </div>
                 <div id="imagesection-up-right">
-                    <img src="images/imagesection01.png">
+                    <img src="./data/sample<?php echo $_GET['id'] ?>/images/imagesection01.png">
                 </div>
             </div>
             <div id="imagesection-down">
                 <div id="imagesection-down-left">
-                    <h1>
-                        만들기는 쉽고<br>
-                        활용도는 최상인<br>
-                        구움과자 집중 커리큘럼
-                    </h1>
-                    <p>
-                        스테디셀러 디저트 마들렌&피낭시엔만을<br>
-                        집중적으로 다룹니다.
-                    </p>
-                    <p>
-                        인기와 맛이 보장된 구움과자류로<br>
-                        &#39;매출&#39;을 올리는 메뉴 개발은 물론,
-                    </p>
-                    <p>
-                        간단한 재료, 일상적 도구만을 활용해<br>
-                        훌륭한 결과물을 내는<br>
-                        &#39;즐거운 취미생활&#39;까지 모두 가능합니다.
-                    </p>
-                    <p>
-                        배워야 할 이유가 너무 많은 마들렌&피낭시에<br>
-                        지금 바로 시작해보세요.
-                    </p>
+                    <h1><?php print_single("img4"); ?></h1>
+                    <p><?php print_single("img5"); ?></p>
+                    <p><?php print_single("img6"); ?></p>
+                    <p><?php print_single("img7"); ?></p>
+                    <p><?php print_single("img8"); ?></p>
                 </div>
                 <div id="imagesection-down-right">
-                    <img src="images/imagesection02.png">
+                    <img src="./data/sample<?php echo $_GET['id'] ?>/images/imagesection02.png">
                 </div>
             </div>
         </div>
+        <!-- 여기까지 함수화 -->
 
         <div id="contentssection">
             <div id="contentssection-title">
@@ -188,7 +181,7 @@
             <div class="contentssection-inner">
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection01.png">
+                        <img src="./images/contentssection01.png">
                     </div>
                     <div class="contents-text">
                         <h4>클래식 마들렌&피낭시에</h4>
@@ -199,7 +192,7 @@
                 </div>
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection02.png">
+                        <img src="./images/contentssection02.png">
                     </div>
                     <div class="contents-text">
                         <h4>더티 마틸다</h4>
@@ -209,7 +202,7 @@
                 </div>
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection03.png">
+                        <img src="./images/contentssection03.png">
                     </div>
                     <div class="contents-text">
                         <h4>블루치즈 마들렌</h4>
@@ -220,7 +213,7 @@
             <div class="contentssection-inner">
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection04.png">
+                        <img src="./images/contentssection04.png">
                     </div>
                     <div class="contents-text">
                         <h4>피낭시에 나튀르</h4>
@@ -229,7 +222,7 @@
                 </div>
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection05.png">
+                        <img src="./images/contentssection05.png">
                     </div>
                     <div class="contents-text">
                         <h4>얼그레이 티 마들렌</h4>
@@ -238,7 +231,7 @@
                 </div>
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection06.png">
+                        <img src="./images/contentssection06.png">
                     </div>
                     <div class="contents-text">
                         <h4>피스타치오&자몽 피낭시에<br>
@@ -250,7 +243,7 @@
             <div class="contentssection-inner">
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection07.png">
+                        <img src="./images/contentssection07.png">
                     </div>
                     <div class="contents-text">
                         <h4>콰트로 포르마지 피낭시에<br>
@@ -260,7 +253,7 @@
                 </div>
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection08.png">
+                        <img src="./images/contentssection08.png">
                     </div>
                     <div class="contents-text">
                         <h4>마들렌 &#39;거문도&#39;</h4>
@@ -269,7 +262,7 @@
                 </div>
                 <div class="contents">
                     <div class="contents-img">
-                        <img src="images/contentssection09.png">
+                        <img src="./images/contentssection09.png">
                     </div>
                     <div class="contents-text">
                         <h4>쌀 피낭시에</h4>
@@ -288,7 +281,7 @@
             <div class="teachersection-inner">
                 <div class="teacher">
                     <div class="teacher-img">
-                        <img src="images/teacher1.png">
+                        <img src="./images/teacher1.png">
                     </div>
                     <div class="teacher-name">
                         <h2>백종원</h2>
@@ -312,7 +305,7 @@
                 </div>
                 <div class="teacher">
                     <div class="teacher-img">
-                        <img src="images/teacher2.png">
+                        <img src="./images/teacher2.png">
                     </div>
                     <div class="teacher-name">
                         <h2>이연복</h2>
@@ -332,7 +325,7 @@
                 </div>
                 <div class="teacher">
                     <div class="teacher-img">
-                        <img src="images/teacher3.png">
+                        <img src="./images/teacher3.png">
                     </div>
                     <div class="teacher-name">
                         <h2>황준호</h2>
@@ -355,7 +348,7 @@
                 </div>
                 <div class="teacher">
                     <div class="teacher-img">
-                        <img src="images/teacher4.png">
+                        <img src="./images/teacher4.png">
                     </div>
                     <div class="teacher-name">
                         <h2>김진우</h2>
@@ -380,7 +373,7 @@
                 </div>
                 <div class="teacher">
                     <div class="teacher-img">
-                        <img src="images/teacher5.png">
+                        <img src="./images/teacher5.png">
                     </div>
                     <div class="teacher-name">
                         <h2>백희준</h2>
@@ -461,7 +454,7 @@
                 <h4>커리큘럼</h4>
                 <p>커리큘럼을 보여드려요</p>
             </div>
-            <div id="curriculumsection-inner"> 
+            <div id="curriculumsection-inner">
                 <div class="curriculum">
                     <div class="curriculum-img">
                         <img src="https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202011/184527-288/curriculum-madeleinexfinancier-01.png">
@@ -621,6 +614,23 @@
 
             </div>
         </div>
+
+        <div id="review">
+            <a href="create.php?id=<?php echo $_GET['id']; ?>">리뷰 등록</a>
+            <a href="update.php?id=<?= $_GET['id']; ?>">리뷰 수정</a>
+            <a href="delete.php?id=<?= $_GET['id']; ?>">리뷰 삭제</a>
+            <div id="review-input">
+                <form action="./update_process.php" method="post">
+                    <p><input type="hidden" name="review-id" value="<?php echo $_GET['id']; ?>"></p>
+                    
+                    <p><textarea name="review-contents" placeholder="수정할 내용을 입력하세요."></textarea></p>
+                    <p><input type="submit" value="수정"></p>
+                </form>
+            </div>
+            <div id="review-result">
+                <?php echo $list; ?>
+            </div>
+        </div>
     </div>
     <!-- wrapper 끝 -->
 
@@ -659,13 +669,13 @@
                 </div>
                 <div id="footer-inner-down-snslink">
                     <a href="" id="facebook">
-                        <img src="images/facebookicon.png">
+                        <img src="./images/facebookicon.png">
                     </a>
                     <a href="" id="instar">
-                        <img src="images/instaricon.png">
+                        <img src="./images/instaricon.png">
                     </a>
                     <a href="" id="youtube">
-                        <img src="images/youtubeicon.png">
+                        <img src="./images/youtubeicon.png">
                     </a>
                 </div>
             </div>
@@ -676,12 +686,30 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
         d3.selectAll("#pricesection-inner-right span")
-            .datum(function(){return this.dataset})
-            .style("height","10%")
-            .style("left",(d,i) => ((i+1)*80)+"px")
+            .datum(function() {
+                return this.dataset
+            })
+            .style("height", "10%")
+            .style("left", (d, i) => ((i) * 80) + "px")
             .transition().duration(1500)
-            .style("height",d=>d.val+"%");
+            .style("height", d => d.val + "%");
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/601b749fc31c9117cb75a52c/1etljv3s5';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
